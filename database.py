@@ -6,11 +6,11 @@ from urllib.parse import quote_plus
 
 
 
-USER = st.secrets(["user"])
-RAW_PASSWORD = st.secrets(["password"])
-HOST = st.secrets(["host"])
-PORT = st.secrets(["port"])
-DBNAME = st.secrets(["dbname"])
+USER = st.secrets["user"]
+RAW_PASSWORD = st.secrets["password"]
+HOST = st.secrets["host"]
+PORT = st.secrets["port"]
+DBNAME = st.secrets["dbname"]
 
 ENCODED_PASSWORD = quote_plus(RAW_PASSWORD)
 
