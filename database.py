@@ -5,12 +5,12 @@ import streamlit as st
 from urllib.parse import quote_plus
 
 
-#sync this with streamlit secrets instead of os
-USER = st.secrets("user")
-RAW_PASSWORD = st.secrets("password")
-HOST = st.secrets("host")
-PORT = st.secrets("port")
-DBNAME = st.secrets("dbname")
+
+USER = st.secrets(["user"])
+RAW_PASSWORD = st.secrets(["password"])
+HOST = st.secrets(["host"])
+PORT = st.secrets(["port"])
+DBNAME = st.secrets(["dbname"])
 
 ENCODED_PASSWORD = quote_plus(RAW_PASSWORD)
 
